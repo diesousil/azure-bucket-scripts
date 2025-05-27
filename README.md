@@ -32,6 +32,7 @@ The files will be loaded into the container and the URLs will be available and p
 # TODO
 
 I plan to implement these features in the near future:
-    1. Saving upload and download log files so that you can check in detail what happened in the process
-    2. Add filters to both scripts by file extension, size and part of the name
-    3. Implement a search tool to consult a list of files based on certain filters.
+
+1. Saving upload and download log files so that you can check in detail what happened in the process
+2. Add filters to both scripts by file extension, size and part of the name
+3. Implement a search tool to consult a list of files based on certain filters.
