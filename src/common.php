@@ -27,3 +27,19 @@ function getBlobUrl($blobName) {
     
     return "https://".$_ENV["AZURE_ACCOUNT_NAME"].".blob.core.windows.net/".$_ENV["AZURE_CONTAINER"]."/{$blobName}?{$sasToken}";
 }
+
+function checkDir(string $path, int $permisions = 0755): bool {
+    
+    if (is_dir($path)) {
+        return true;
+    }
+
+    if (!mkdir($path, $permisions, true)) {        
+        return false;
+    }
+
+    return true;
+}
+
+checkDir(getcwd()."/".$_ENV["OUTPUT_DIR"]);
+checkDir(getcwd()."/".$_ENV["INPUT_DIR"]);
